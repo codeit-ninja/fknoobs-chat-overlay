@@ -1,11 +1,12 @@
 <script lang="ts">
     import { parseMessage } from '$lib/utils';
+    import { env } from '$env/dynamic/public';
     import tmi from 'tmi.js';
 
     const messages = $state<string[]>([])
     const client = new tmi.Client({
         options: { debug: false },
-        channels: ['eslcs']
+        channels: [env.PUBLIC_BROADCASTER_NAME]
     })
 
     client.connect().catch(console.log)
