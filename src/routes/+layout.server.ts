@@ -1,17 +1,17 @@
 import type { LayoutServerLoad } from './$types';
 import { AppTokenAuthProvider } from '@twurple/auth';
 import { ApiClient, HelixChatBadgeSet } from '@twurple/api';
-import { env } from '$env/dynamic/public';
+import { PUBLIC_CLIENT_ID, PUBLIC_CLIENT_SECRET, PUBLIC_BROADCASTER_NAME } from '$env/static/public';
 import { error } from '@sveltejs/kit';
 
 export const load: LayoutServerLoad = async ( { fetch } ) => {
-    const authProvider = new AppTokenAuthProvider(env.PUBLIC_CLIENT_ID, env.PUBLIC_CLIENT_SECRET)
+    const authProvider = new AppTokenAuthProvider(PUBLIC_CLIENT_ID, PUBLIC_CLIENT_SECRET)
     const client = new ApiClient({ authProvider })
     
-    const broadcaster = await client.users.getUserByName(env.PUBLIC_BROADCASTER_NAME);
+    const broadcaster = await client.users.getUserByName(PUBLIC_BROADCASTER_NAME);
 
     if ( ! broadcaster ) {
-		error(500, 'Could not find a broadcaster with name ' + env.PUBLIC_BROADCASTER_NAME)
+		error(500, 'Could not find a broadcaster with name ' + PUBLIC_BROADCASTER_NAME)
 	}
 
     const globalBadgesRaw = await client.chat.getGlobalBadges()
@@ -36,3 +36,5 @@ export const load: LayoutServerLoad = async ( { fetch } ) => {
         badges
     }
 }
+
+export const prerender = true
