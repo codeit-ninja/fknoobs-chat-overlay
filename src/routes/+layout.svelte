@@ -7,4 +7,8 @@
     export let data: LayoutData;
 </script>
 
+<svelte:head>
+    <title>FkNoobsCoH - Chat overlay</title>
+</svelte:head>
+
 <slot />
