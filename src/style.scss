@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+
+:root {
+    --color-primary: #ffd37a;
+    --color-primary-rgb: 255, 211, 122;
+    --color-secondary: #080707;
+    --color-secondary-rgb: 8, 7, 7;
+    --color-gray: #2F4858;
+    --color-gray-rgb: 47, 72, 88;
+}
+
+html, 
+body {
+    font-family: 'Inconsolata';
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow: hidden;
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-left: auto;
+    padding: 1.5rem;
+}
+
+.chat--message {
+    background-color: rgba(var(--color-secondary-rgb), .7);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-align: right;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    animation-duration: .22s;
+    max-width: 500px;
+}
+
+.username {
+    align-self: flex-start;
+    font-weight: 800;
+}
+
+img {
+    max-width: 1rem;
+}
