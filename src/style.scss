@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --color-primary: #ffd37a;
-    --color-primary-rgb: 255, 211, 122;
+    --color-primary: #f2bd0e;
+    --color-primary-rgb: 242, 189, 14;
     --color-secondary: #080707;
     --color-secondary-rgb: 8, 7, 7;
     --color-gray: #2F4858;
@@ -12,9 +13,9 @@
 
 html, 
 body {
-    font-family: 'Inconsolata';
+    font-family: 'Teko', sans-serif;
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 300;
     margin: 0;
     padding: 0;
     color: white;
