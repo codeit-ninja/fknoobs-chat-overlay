@@ -15,8 +15,10 @@
 
 <div class="container">
     <div class="chat">
-        {#each messages as message}
-            <div class="chat--message animate__animated animate__fadeIn">
+        {#each messages as message, i}
+            <div 
+                class="chat--message animate__animated animate__fadeIn"
+            >
                 {@html message}
             </div>
         {/each}

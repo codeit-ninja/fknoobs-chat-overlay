@@ -50,49 +50,16 @@ body {
     display: inline-block;
     padding: .75rem 1.3rem;
     border-radius: 10px;
-    animation-duration: .33s;
     max-width: 450px;
     line-height: 1.3;
 
-    &:nth-last-child(6) {
-        opacity: .9 !important;
+    &:nth-last-child(n+3) {
+        display: none;
     }
+}
 
-    &:nth-last-child(7) {
-        opacity: .8 !important;
-    }
-
-    &:nth-last-child(8) {
-        opacity: .7 !important;
-    }
-
-    &:nth-last-child(9) {
-        opacity: .6 !important;
-    }
-
-    &:nth-last-child(10) {
-        opacity: .5 !important;
-    }
-
-    &:nth-last-child(11) {
-        opacity: .4 !important;
-    }
-
-    &:nth-last-child(12) {
-        opacity: .3 !important;
-    }
-
-    &:nth-last-child(13) {
-        opacity: .2 !important;
-    }
-
-    &:nth-last-child(14) {
-        opacity: .1 !important;
-    }
-
-    &:nth-last-child(15) {
-        opacity: 0 !important;
-    }
+.chat--message.animate__animated {
+    animation-duration: .33s;
 }
 
 .user {
