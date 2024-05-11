@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
 
 :root {
     --color-primary: #f2bd0e;
@@ -13,7 +14,10 @@
 
 html, 
 body {
-    font-family: 'Teko', sans-serif;
+    font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1.2rem;
     font-weight: 300;
     margin: 0;
@@ -45,11 +49,10 @@ body {
 }
 
 .chat--message {
-    background-color: rgba(var(--color-secondary-rgb), .7);
+    background-color: rgba(var(--color-secondary-rgb), .6);
     color: var(--color-primary);
     display: inline-block;
     padding: .75rem 1.3rem;
-    border-radius: 10px;
     max-width: 450px;
     line-height: 1.3;
 
@@ -58,7 +61,7 @@ body {
     }
 
     &:nth-last-child(3) {
-        opacity: .5 !important;
+        opacity: .3 !important;
     }
 }
 
